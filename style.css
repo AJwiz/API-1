@@ -1,0 +1,102 @@
+body {
+    font-family: 'Montserrat' !important;
+    background: linear-gradient(to right, #83a4d4, #b6fbff);
+}
+
+.fact-head {
+    color: chartreuse;
+    text-align: center;
+}
+
+.fsec {
+    text-align: center;
+    border: 2px dotted crimson;
+}
+
+.para {
+    font-weight: bold;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-title {
+    cursor: pointer;
+    color: red;
+    font-size: 30px;
+}
+
+.header {
+    background: linear-gradient(to right, #e96443, #904e95);
+}
+
+.row {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    background: linear-gradient(to right, #abbaab, #ffffff);
+    display: flex;
+    flex-wrap: wrap !important;
+    flex-direction: row !important;
+    border-radius: 20px !important;
+    box-shadow: 0 3px 10px 0 #aaa;
+    /* cursor: pointer; */
+    width: 350px;
+    height: 450px;
+    margin-top: 25px;
+}
+
+h1 {
+    font-style: oblique;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-weight: bolder;
+}
+
+h4,
+h5 {
+    text-align: center;
+    text-decoration: solid;
+}
+
+h5 {
+    text-transform: capitalize;
+}
+
+img {
+    --s: 20px;
+    /* size of the frame */
+    --b: 3px;
+    /* border thickness */
+    --w: 250px;
+    /* width of the image */
+    --c: #6cb962;
+
+    width: var(--w);
+    aspect-ratio: 1;
+    object-fit: fill;
+    padding: var(--s);
+    --_g: #0000 25%, var(--c) 0;
+    background:
+        conic-gradient(from 90deg at top var(--b) left var(--b), var(--_g)) var(--_p, -5%) var(--_p, -5%),
+        conic-gradient(from 180deg at top var(--b) right var(--b), var(--_g)) calc(100% - var(--_p, -5%)) var(--_p, -5%),
+        conic-gradient(from 0deg at bottom var(--b) left var(--b), var(--_g)) var(--_p, -5%) calc(100% - var(--_p, -5%)),
+        conic-gradient(from -90deg at bottom var(--b) right var(--b), var(--_g)) calc(100% - var(--_p, -5%)) calc(100% - var(--_p, -5%));
+    background-size: 20% 20%;
+    background-repeat: no-repeat;
+    outline: calc(var(--w)/2) solid rgba(0, 0, 0, 0.333);
+    outline-offset: calc(var(--w)/-2 - var(--s));
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    transition: .5s;
+}
+
+img:hover {
+    outline-offset: 2px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    --_p: calc(var(--s)/4);
+    transition: .3s, background-position .3s .35s;
+}
